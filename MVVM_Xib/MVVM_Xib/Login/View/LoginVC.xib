@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginVC" customModule="MVVM_Xib" customModuleProvider="target">
+            <connections>
+                <outlet property="birthdate" destination="2jj-6e-QHI" id="sRj-y5-dJP"/>
+                <outlet property="username" destination="gea-RC-sBp" id="bDm-st-RYo"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gea-RC-sBp">
+                    <rect key="frame" x="133" y="321" width="240" height="28.666666666666686"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                </textField>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="66" translatesAutoresizingMaskIntoConstraints="NO" id="dKl-iS-70l">
+                    <rect key="frame" x="30" y="325" width="83" height="106.66666666666669"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hhr-TA-iUQ">
+                            <rect key="frame" x="0.0" y="0.0" width="83" height="20.333333333333332"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Birthdate:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rfa-nb-6is">
+                            <rect key="frame" x="0.0" y="86.333333333333314" width="83" height="20.333333333333329"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
+                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="2jj-6e-QHI">
+                    <rect key="frame" x="133" y="404.33333333333331" width="160" height="34.333333333333314"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="160" id="7WI-6d-i1Z"/>
+                    </constraints>
+                </datePicker>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QRE-sO-Ptl">
+                    <rect key="frame" x="144.66666666666666" y="596" width="104" height="35"/>
+                    <color key="backgroundColor" red="0.21488738639999999" green="0.21488738639999999" blue="0.21488738639999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="Exf-IS-qlj"/>
+                        <constraint firstAttribute="width" constant="104" id="qfd-gX-kRs"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Next">
+                        <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </buttonConfiguration>
+                    <connections>
+                        <action selector="next:" destination="-1" eventType="touchUpInside" id="dJn-cR-MOt"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="gea-RC-sBp" firstAttribute="leading" secondItem="dKl-iS-70l" secondAttribute="trailing" constant="20" id="KRD-Bc-eVO"/>
+                <constraint firstItem="QRE-sO-Ptl" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="QYg-Bb-mL5"/>
+                <constraint firstItem="dKl-iS-70l" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="cYV-wq-NCE"/>
+                <constraint firstItem="dKl-iS-70l" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="266" id="kTE-0B-JwH"/>
+                <constraint firstItem="2jj-6e-QHI" firstAttribute="leading" secondItem="dKl-iS-70l" secondAttribute="trailing" constant="20" id="rsh-W7-xha"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="QRE-sO-Ptl" secondAttribute="bottom" constant="187" id="uq6-5G-d8y"/>
+                <constraint firstItem="gea-RC-sBp" firstAttribute="centerY" secondItem="hhr-TA-iUQ" secondAttribute="centerY" id="vQ9-Hg-2uD"/>
+                <constraint firstItem="2jj-6e-QHI" firstAttribute="centerY" secondItem="Rfa-nb-6is" secondAttribute="centerY" id="vd8-mO-wfh"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="gea-RC-sBp" secondAttribute="trailing" constant="20" id="ySm-Cj-IN8"/>
+            </constraints>
+            <point key="canvasLocation" x="113.74045801526717" y="-11.267605633802818"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
